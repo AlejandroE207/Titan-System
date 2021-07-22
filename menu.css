@@ -1,10 +1,7 @@
 
 menu {
     color :aliceblue;
-    background: red;
+    background: rgb(83, 81, 81);
     list-style: none;
 }
 
-body {
-    background-color: red;
-}
