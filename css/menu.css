@@ -1,0 +1,57 @@
+:root{
+    --azul:rgb(182, 225, 250);
+    --negro:rgb(0, 0, 0);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 16px; /*1rem equivaldria a 10px*/
+}
+
+header{
+    font-family: 'Pacifico', cursive;
+    /*overflow: hidden;*/
+}
+
+
+.wrapper{
+    background-color: var(--azul);
+    display: flex;
+    align-items: center;
+}
+
+.wrapper img{
+    width: 10rem;
+}
+
+.contenedor{
+    width: 100rem;
+    margin: auto;
+}
+
+.menu_principal{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--azul);
+}
+
+
+.menu_li_a{
+    text-decoration: none;
+    color: var(--negro);
+    background-image: linear-gradient(red, rgb(255, 0, 0));
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 3px;
+    transition: background-size .5s;
+    padding: 1rem;
+}
+
+.menu_li_a:hover, .menu_li_a:focus{
+    background-size: 100% 3px;
+
+}
