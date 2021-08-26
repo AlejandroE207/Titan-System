@@ -1,10 +1,17 @@
 :root{
     --azul:rgb(182, 225, 250);
     --negro:rgb(0, 0, 0);
+    --rojo: rgb(255, 0, 0);
+    --blanco: rgb(255, 255, 255);
 }
 
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body{
@@ -16,11 +23,25 @@ header{
     /*overflow: hidden;*/
 }
 
+h1{
+    font-size: 4.8rem;
+}
+
+h2{
+    font-size: 3.8rem;
+}
+
+h3{
+    font-size: 2.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
 
 .wrapper{
     background-color: var(--azul);
     display: flex;
-    align-items: center;
 }
 
 .wrapper img{
@@ -28,17 +49,26 @@ header{
 }
 
 .contenedor{
-    width: 100rem;
+    max-width: 100rem;
     margin: auto;
+}
+
+.sombra{
+    -webkit-box-shadow: 2px 7px 33px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 7px 33px -2px rgba(0,0,0,0.75);
+    box-shadow: 2px 7px 33px -2px rgba(0,0,0,0.75);
+    /* margin-top: 3rem; */
+    padding: 3rem;
+    border-radius: 3rem;
 }
 
 .menu_principal{
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
     background-color: var(--azul);
 }
-
 
 .menu_li_a{
     text-decoration: none;
@@ -49,9 +79,77 @@ header{
     background-size: 0% 3px;
     transition: background-size .5s;
     padding: 1rem;
+    
 }
 
 .menu_li_a:hover, .menu_li_a:focus{
     background-size: 100% 3px;
+}
 
+.hero{
+    background-image: url(../img/mantenimiento.jpg);
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.contenedor_hero{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_hero h2, .contenedor_hero p{
+    color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    align-items: center;
+}
+
+.boton{
+    background-color: var(--azul);
+    color: var(--negro);
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 1rem;
+    width: 90%;
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+.servicios section{
+    margin: 0rem 1rem;
+}
+
+@media (min-width: 760px){
+    .servicios{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 760px){
+    .boton{
+        width:auto;
+    }
+}
+
+@media (min-width: 760px){
+    .menu_principal{
+        flex-direction:row;
+        justify-content: space-between;
+    }
 }
