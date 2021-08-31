@@ -49,6 +49,15 @@ h1,h2,h3{
 
 .wrapper img{
     width: 10rem;
+    height: 10rem;
+}
+
+@media (min-width: 768px){
+    .wrapper img{
+        width:13rem;
+        height: 12rem;
+
+    }
 }
 
 .contenedor{
