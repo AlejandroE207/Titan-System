@@ -5,6 +5,9 @@
     --blanco: rgb(255, 255, 255);
     --grisOscuro:rgb(92, 92, 92);
     --naranja: rgb(255, 81, 0);
+
+    --fuente1: 'Pacifico', cursive;
+    --fuente2: 'Glory', sans-serif;
 }
 
 html{
@@ -18,12 +21,11 @@ html{
 
 body{
     font-size: 16px; /*1rem equivaldria a 10px*/
-    font-family: 'Glory', sans-serif;
+    font-family: var(--fuente2);
 }
 
 header{
-    font-family: 'Pacifico', cursive;
-    /*overflow: hidden;*/
+    font-family: var(--fuente1);
 }
 
 h1{
