@@ -49,16 +49,26 @@ h1,h2,h3{
     display: flex;
 }
 
-.wrapper img{
+
+/* LOGO */
+.webp .logo{
+    width: 10rem;
+    height: 10rem;
+}
+.nowebp .logo{
     width: 10rem;
     height: 10rem;
 }
 
 @media (min-width: 768px){
-    .wrapper img{
-        width:13rem;
-        height: 12rem;
 
+    .webp .logo{
+        width:13rem;
+        height: 13rem;
+    }
+    .nowebp .logo{
+        width:13rem;
+        height: 13rem;
     }
 }
 

@@ -4,19 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+        <!-- PREFETCH -->
+        <link rel="prefetch" href="nosotros.html" as="document">
+
+        <!-- PRELOAD -->
         <link rel="preload" href="css/normalize.css" as="style">
         <link rel="preload" href="css/estiloIndex.css" as="style">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/estiloIndex.css">
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-        <link href="<link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,400;0,700;1,200&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" crossorigin="crossorigin" as="font">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" >
+        <link href="<link href=https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,400;0,700;1,200&display=swap" >
         <link rel="icon" href="img/Icono(1).ico" />
         <title>TITAN SYSTEM</title>
     </head>
     <body>
         <header>
             <div class="wrapper">
-                <img src="img/Logo(1).png">
+                <picture class="wrapper__logo">
+                    <source class="logo" loading="lazy" srcset="img/Logo(1).webp" type="image/webp">
+                    <img class="logo" src="img/Logo(1).png" alt="imagen logo">
+                </picture>
+                
                 <nav class="menu_principal contenedor">
                             
                     <a href="index.html" class="menu_li_a">Inicio</a>
@@ -36,7 +47,7 @@
                     TITAN SYSTEM
                 </h2>
 
-                <div class="ubicacion">
+                <div class="hero__ubicacion">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <circle cx="12" cy="11" r="3" />
@@ -115,23 +126,23 @@
 
                     <div class="contenedor-campos">
                         <div class="campo">
-                            <label>Nombre</label>
-                            <input type="text" placeholder="Tu nombre">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" placeholder="Tu nombre" id="nombre">
                         </div>
 
                         <div class="campo">
-                            <label>Telefono</label>
-                            <input type="number" placeholder="Tu numero">
+                            <label for="telefono">Telefono</label>
+                            <input type="number" placeholder="Tu numero" id="telefono">
                         </div>
 
                         <div class="campo">
-                            <label>Correo</label>
-                            <input type="mail" placeholder="correo@ejemplo.com">
+                            <label for="correo">Correo</label>
+                            <input type="mail" placeholder="correo@ejemplo.com" id="correo">
                         </div>
 
                         <div class="campo">
-                            <label>Mensaje</label>
-                            <textarea class="input-text"></textarea>
+                            <label for="mensaje">Mensaje</label>
+                            <textarea class="input-text" id="mensaje"></textarea>
                         </div>
                     </div>  <!-- .contenedor-campos -->
                     
@@ -146,5 +157,7 @@
     <footer class="footer">
         <p>Todos los derechos reservados TITAN SYSTEM 2021.</p>
     </footer>
+
+    <script src="js/modernizr.js"></script>
     </body>
 </html>
