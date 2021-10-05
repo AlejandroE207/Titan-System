@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="css/normalize.css" as="style">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="preload" href="css/estiloNosotros.css" as="style">
-    <link rel="stylesheet" href="css/estiloNosotros.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="<link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,400;0,700;1,200&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/Icono(1).ico" />
-    <title>TITAN SYSTEM</title>
+
+        <!-- PREFETCH -->
+        <link rel="prefetch" href="index.html" as="document">
+
+        <!-- PRELOAD -->
+        <link rel="preload" href="css/normalize.css" as="style">
+        <link rel="preload" href="css/estilo.css" as="style">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/estilo.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" crossorigin="crossorigin" as="font">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" >
+        <link href="<link href=https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,400;0,700;1,200&display=swap" >
+        <link rel="icon" href="img/Icono(1).ico" />
+        <title>TITAN SYSTEM</title>
 </head>
 <body>
     <header>
         <div class="wrapper">
-            <img src="img/Logo(1).png">
+            <picture class="wrapper__logo">
+                <source class="logo" loading="lazy" srcset="img/Logo(1).webp" type="image/webp">
+                <img class="logo" loading="lazy" src="img/Logo(1).png" alt="logo empresa">
+            </picture>
+            
             <nav class="menu_principal contenedor">
                         
                 <a href="index.html" class="menu_li_a">Inicio</a>
@@ -34,7 +44,7 @@
         <h1>Nosotros</h1>
 
         <div class="nosotros contenedor">
-            <div class="nosotros-contenido">
+            <div class="nosotros__contenido">
                 <p>
                     Titan System es una empresa que hasta ahora esta empezando a 
                     salir a la luz. Enfocada en las areas de mantenimiento preventivo 
@@ -48,7 +58,11 @@
                     la luz.
                 </p>
             </div><!-- .nosotros-contenido -->
-            <img class="nosotros_imagen" src="img/Logo(1).png" alt="Logo corporativo">
+            <picture>
+                <source class="nosotros__imagen" loading="lazy" srcset="img/Logo(1).webp" type="image/webp">
+                <img class="nosotros__imagen"  loading="lazy" src="img/Logo(1).png" alt="Logo corporativo">
+            </picture>
+            
         </div>
 
         <section class="vision-mision">
@@ -81,9 +95,13 @@
                 <div class="beneficio">
                     <h3>Calidad</h3>
                     <div class="iconos">
-                        <img src="img/calidad.png" alt="Imagen de calidad">
+                        <picture>
+                            <source class="beneficio__icono" loading="lazy" srcset="img/calidad.webp" type="image/webp">
+                            <img class="beneficio__icono" loading=lazy src="img/calidad.png" alt="Imagen de calidad">
+                        </picture>
+                        
                     </div>
-                    <p>Proporcionamos la mejor calidad de nuestros servicios
+                    <p class="beneficio__contenido">Proporcionamos la mejor calidad de nuestros servicios
                         a nuestros clientes, utilizando herramientas de calidad 
                         y buenas practicas de desarrollo.
                     </p>
@@ -92,9 +110,13 @@
                 <div class="beneficio">
                     <h3>Velocidad</h3>
                     <div class="iconos">
-                        <img src="img/velocidad.png" alt="imagen de velocidad">
+                        <picture>
+                            <source class="beneficio__icono" loading="lazy" srcset="img/velocidad.webp" type="image/webp">
+                            <img class="beneficio__icono" loading="lazy" src="img/velocidad.png" alt="imagen de velocidad">
+                        </picture>
+                        
                     </div>
-                    <p>
+                    <p class="beneficio__contenido">
                         Realizamos nuestros servicios con la mejor eficacia y con 
                         la mayor rapidez posible, ya que nos importa el bien de nuestros
                         clientes.
@@ -104,9 +126,13 @@
                 <div class="beneficio">
                     <h3>Diseño</h3>
                     <div class="iconos">
-                        <img src="img/diseño.png" alt="imagen diseño">
+                        <picture>
+                            <source class="beneficio__icono" loading="lazy" srcset="img/diseño.webp" type="image/webp">
+                            <img class="beneficio__icono" loading="lazy" src="img/diseño.png" alt="imagen diseño">
+                        </picture>
+                        
                     </div>
-                    <p>
+                    <p class="beneficio__contenido">
                         Diseñamos tu pagina web a tu gusto con buenas practicas de
                         desarrollo, incluso es posible que tu nos pases tu diseño
                         y nosotros lo haremos realidad.
@@ -114,6 +140,8 @@
                 </div>
             </div><!-- .beneficios -->
         </section>
+
+ 
 
         <div class="contenedor-boton">
             <a href="#" class="boton">
@@ -124,5 +152,7 @@
     <footer class="footer">
         <p>Todos los derechos reservados TITAN SYSTEM 2021.</p>
     </footer>
+
+    <script src="js/modernizr.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@
             <div class="wrapper">
                 <picture class="wrapper__logo">
                     <source class="logo" loading="lazy" srcset="img/Logo(1).webp" type="image/webp">
-                    <img class="logo" src="img/Logo(1).png" alt="imagen logo">
+                    <img class="logo" loading="lazy" src="img/Logo(1).png" alt="imagen logo">
                 </picture>
                 
                 <nav class="menu_principal contenedor">
@@ -43,7 +43,7 @@
 
         <section class="hero">
             <div class="contenedor_hero">
-                <h2 class="titulo">
+                <h2 class="hero__titulo">
                     TITAN SYSTEM
                 </h2>
 
@@ -53,7 +53,7 @@
                         <circle cx="12" cy="11" r="3" />
                         <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
                     </svg>
-                    <P>
+                    <P class="hero__ubicacion--contenido">
                         Mosquera, Cundinamarca
                     </P>
                 </div>
@@ -73,7 +73,7 @@
                         <circle cx="12" cy="12" r="3" />
                     </svg>
                 </div>
-                <p>
+                <p class="servicio__contenido">
                     El mantenimiento preventivo es importanta para el correcto
                     funcionamiento de la maquina y la prolongacion de vida de la 
                     misma. Comunicate con nosotros para saber lo que incluye y 
@@ -106,7 +106,7 @@
                         <line x1="14" y1="4" x2="10" y2="20" />
                     </svg>
                 </div>
-                <p>
+                <p class="correcion__texto">
                     Diseñamos y programamos paginas web a tu gusto, cumpliendo
                     con todos tus requerimientos, son programadas con difetentes lenguajes
                     como HTML, CSS, JavaScript, SQL, PHP, entre otros. Comunicate con 
@@ -118,31 +118,31 @@
         <section>
             <h2>Contacto</h2>
             <form action="" class="formulario">
-                <fieldset>
-                        <legend>
+                <fieldset class="formulario__fieldset">
+                        <legend class="formulario__legend">
                             Contactenos llenando los siguientes campos
                         </legend>
 
 
                     <div class="contenedor-campos">
                         <div class="campo">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" placeholder="Tu nombre" id="nombre">
+                            <label class="campo__label" for="nombre">Nombre</label>
+                            <input class="campo__field" type="text" placeholder="Tu nombre" id="nombre">
                         </div>
 
                         <div class="campo">
-                            <label for="telefono">Telefono</label>
-                            <input type="number" placeholder="Tu numero" id="telefono">
+                            <label class="campo__label" for="telefono">Telefono</label>
+                            <input class="campo__field" type="number" placeholder="Tu numero" id="telefono">
                         </div>
 
                         <div class="campo">
-                            <label for="correo">Correo</label>
-                            <input type="mail" placeholder="correo@ejemplo.com" id="correo">
+                            <label class="campo__label" for="correo">Correo</label>
+                            <input class="campo__field" type="mail" placeholder="correo@ejemplo.com" id="correo">
                         </div>
 
                         <div class="campo">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea class="input-text" id="mensaje"></textarea>
+                            <label class="campo__label" for="mensaje">Mensaje</label>
+                            <textarea class="campo__field campo__field--textarea" id="mensaje"></textarea>
                         </div>
                     </div>  <!-- .contenedor-campos -->
                     
