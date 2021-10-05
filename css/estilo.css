@@ -320,7 +320,8 @@ h1,h2,h3{
 @media (min-width: 768px){
     .nosotros__imagen{
         grid-column: 2/3;
-        max-width: 100%;
+        width: 14em;
+        height: 15em;
     }
 }
 
