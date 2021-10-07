@@ -27,17 +27,19 @@
     <header>
         <div class="wrapper">
             <picture class="wrapper__logo">
-                <source class="logo" loading="lazy" srcset="img/Logo(1).webp" type="image/webp">
-                <img class="logo" loading="lazy" src="img/Logo(1).png" alt="logo empresa">
+                <a href="index.html">
+                    <source class="logo" loading="lazy" srcset="img/Logo(1).webp" type="image/webp">
+                    <img class="logo" loading="lazy" src="img/Logo(1).png" alt="imagen logo">
+                </a>
             </picture>
             
             <nav class="menu_principal contenedor">
                         
                 <a href="index.html" class="menu_li_a">Inicio</a>
     
-                <a href="#" class="menu_li_a" >Contactenos</a>
+                <a href="contactenos.html" class="menu_li_a" >Contactenos</a>
 
-                <a href="#" class="menu_li_a" >Blog</a>
+                <!-- <a href="#" class="menu_li_a" >Blog</a> -->
         
                 <a href="nosotros.html" class="menu_li_a" >Nosotros</a>
             </nav>
@@ -47,6 +49,39 @@
     <main class="contenedor2 padding-top ">
         <!-- <h1 class="centrar-texto">Contactese con nosotros</h1> -->
         <div class="contacto-bg"></div>
+
+        <form action="" class="formulario">
+            <fieldset class="formulario__fieldset">
+                <legend class="formulario__legend">
+                    Contactenos llenando los siguientes campos
+                </legend>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label for="nombre" class="campo__label">Nombre</label>
+                        <input type="text" class="campo__field" placeholder="Tu nombre" id="nombre">
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono" class="campo__label">Telefono</label>
+                        <input type="number" class="campo__field" placeholder="Tu numero" id="telefono">
+                    </div>
+
+                    <div class="campo">
+                        <label class="campo__label" for="correo">Correo</label>
+                        <input class="campo__field" type="mail" placeholder="correo@ejemplo.com" id="correo">
+                    </div>
+
+                    <div class="campo">
+                        <label class="campo__label" for="mensaje">Mensaje</label>
+                        <textarea class="campo__field campo__field--textarea" id="mensaje"></textarea>
+                    </div>
+                   
+                </div>
+                 <div class="flex alinear-centro">
+                        <input class="boton enviar w-sm-100"   type="submit" value="Enviar">
+                    </div>
+        </fieldset>
+        </form>
 
     </main>
     <footer class="footer">
